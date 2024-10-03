@@ -1,0 +1,129 @@
+/* Apply a dark theme background with light text */
+body {
+  background: url('./assets/background.jpeg') no-repeat center center fixed; /* Background image */
+  background-size: cover; /* Ensure the background covers the entire area */
+  color: #d4d4d4; /* Light text */
+  font-family: 'Fira Code', monospace; /* Monospace font for coding feel */
+  margin: 0;
+  padding: 0;
+}
+
+/* Overlay to improve text readability */
+.overlay {
+  position: fixed; /* Fix overlay to cover the whole screen */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Translucent black overlay */
+  z-index: 1; /* Ensure it appears above other content */
+}
+
+header, footer {
+  background-color: rgba(37, 38, 38, 0.9); /* Slightly different dark tone for header and footer with transparency */
+  padding: 20px;
+  text-align: center;
+  z-index: 2; /* Ensure header/footer appears above the overlay */
+  position: relative; /* Positioning context for z-index */
+}
+
+h1, h2 {
+  color: #569cd6; /* Light blue color resembling code keywords */
+}
+
+a {
+  color: #9cdcfe; /* Link color resembling code strings */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 20px;
+  position: relative; /* Positioning context for z-index */
+  z-index: 2; /* Ensure main content appears above the overlay */
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+/* Styling tables to resemble terminal-like borders */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  border: 1px solid #333; /* Dark border for terminal look */
+}
+
+th, td {
+  border: 1px solid #333; /* Dark border */
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #333;
+  color: #dcdcaa; /* Yellow resembling variable names */
+}
+
+td {
+  background-color: #2d2d2d; /* Slightly lighter background */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  padding: 8px 0;
+  color: #9cdcfe; /* Light blue like code strings */
+}
+
+footer p {
+  color: #808080; /* Muted gray for footer text */
+  font-size: 12px;
+}
+
+/* Make the website responsive */
+@media (max-width: 768px) {
+  main {
+      padding: 10px;
+  }
+
+  table {
+      font-size: 12px;
+  }
+}
+
+/* Add a code-like border to images */
+.img1 {
+  border: 3px solid #333; /* Dark border */
+  display: block;
+  margin: 0 auto;
+  max-width: 200px;
+  border-radius: 10px;
+}
+
+/* Animation styles */
+.fade-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms ease-in, transform 300ms ease-in;
+}
+.fade-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+.fade-exit-active {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 300ms ease-in, transform 300ms ease-in;
+}

@@ -1,0 +1,116 @@
+/* Contact.css */
+
+.contact-page {
+    background: url('./assets/contact_background.jpg') no-repeat center center fixed; /* Background image */
+    background-size: cover; /* Ensure the background covers the entire area */
+    color: #d4d4d4; /* Light text */
+    font-family: 'Fira Code', monospace; /* Monospace font for coding look */
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px; /* Add padding to avoid elements being too close to the edges */
+    box-sizing: border-box; /* Include padding in the element's total width/height */
+    margin: 0; /* Remove any default margin */
+}
+
+/* Overlay for improved text readability */
+.overlay {
+    position: fixed; /* Fix overlay to cover the whole screen */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Translucent black overlay */
+    z-index: 1; /* Ensure it appears above the background */
+}
+
+header h1 {
+    color: #569cd6; /* Blue text like in a code editor */
+    margin: 20px 0;
+    z-index: 2; /* Ensure header text appears above the overlay */
+    position: relative; /* Positioning context for z-index */
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 40px auto; /* Center the buttons with auto margins */
+    padding: 20px; /* Add padding for better spacing */
+    max-width: 100%; /* Allow buttons to take full width */
+    width: 100%; /* Ensure the contact-buttons section is full width */
+    position: relative; /* Positioning context for z-index */
+    z-index: 2; /* Ensure buttons appear above the overlay */
+}
+
+button {
+    background-color: #2d2d2d; /* Dark button background */
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s; /* Add background-color transition */
+    flex: 1 0 150px; /* Allow buttons to grow and shrink, with a minimum width */
+    max-width: 200px; /* Optional: Max width for buttons */
+    box-sizing: border-box; /* Include padding in button's total width/height */
+}
+
+button img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+button:hover {
+    transform: scale(1.1); /* Enlarge on hover */
+    background-color: #3a3a3a; /* Lighter background on hover */
+}
+
+footer {
+    margin-top: 20px;
+    color: #808080; /* Muted footer text */
+    z-index: 2; /* Ensure footer text appears above the overlay */
+    position: relative; /* Positioning context for z-index */
+}
+
+a {
+    color: #9cdcfe;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Animation styles for buttons */
+.fade-enter {
+    opacity: 0;
+    transform: translateY(20px);
+}
+.fade-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms ease-in, transform 300ms ease-in;
+}
+.fade-exit {
+    opacity: 1;
+    transform: translateY(0);
+}
+.fade-exit-active {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 300ms ease-in, transform 300ms ease-in;
+}
+
+/* Ensure buttons are responsive on smaller screens */
+@media (max-width: 768px) {
+    .contact-buttons {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+        margin: 20px; /* Reduce margin on smaller screens */
+    }
+
+    button {
+        width: 100%; /* Make buttons full width on small screens */
+        max-width: none; /* Remove max width to allow full width */
+    }
+}

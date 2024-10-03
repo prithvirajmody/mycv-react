@@ -1,0 +1,83 @@
+/* DownloadCV.css */
+
+.download-cv-page {
+    background: url('./assets/background.jpeg') no-repeat center center fixed; /* Background image */
+    background-size: cover; /* Ensure the background covers the entire area */
+    color: #d4d4d4; /* Light text */
+    font-family: 'Fira Code', monospace; /* Monospace font for coding feel */
+    margin: 0;
+    padding: 0;
+}
+  
+  /* Overlay to improve text readability */
+.overlay {
+    position: fixed; /* Fix overlay to cover the whole screen */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Translucent black overlay */
+    z-index: 1; /* Ensure it appears above other content */
+  }
+
+header h1 {
+    color: #569cd6; /* Blue text like in a code editor */
+    margin: 20px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; /* Center vertically */
+}
+
+.vertical-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    background-color: #2d2d2d; /* Dark button background */
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s; /* Add background-color transition */
+    flex: 1 0 150px; /* Allow buttons to grow and shrink, with a minimum width */
+    max-width: 200px; /* Optional: Max width for buttons */
+    box-sizing: border-box; /* Include padding in button's total width/height */
+}
+
+button img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+button:hover {
+    transform: scale(1.1); /* Enlarge on hover */
+    background-color: #3a3a3a; /* Lighter background on hover */
+}
+
+footer {
+    margin-top: 20px;
+    color: #808080; /* Muted footer text */
+}
+
+a {
+    color: #9cdcfe; /* Light blue color like code strings */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Make the page responsive */
+@media (max-width: 768px) {
+    button {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
